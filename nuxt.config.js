@@ -18,7 +18,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#74EBD5' },
   /*
   ** Global CSS
   */
@@ -29,6 +29,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/directives.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,6 +54,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: 'http://pharmacareweb.info/api/'
   },
   /*
   ** Build configuration

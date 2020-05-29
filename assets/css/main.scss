@@ -1,24 +1,42 @@
 $primary: #74EBD5;
 $secondary: #ACB6E5;
-.container {
+.app-w {
     @apply flex mx-auto text-center;
 }
 
 // TRANSITIONS
 
 .page-enter-active, .page-leave-active {
-    transition: opacity .2s;
+    transition: opacity .7s;
 }
 .page-enter, .page-leave {
     opacity: 0;
+}
+
+.select-enter-active,
+.select-leave-active {
+  transition: all .2s;
+}
+.select-enter,
+.select-leave-to {
+  transform: translateY(-5px);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .2s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 
 // SCROLL
 
 *::-webkit-scrollbar-thumb{
     background-color: #ACB6E5;
-    border-radius: 100px;
-    cursor: pointer;
+    border-radius: 2px;
 }
 body{
     *::-webkit-scrollbar {
@@ -29,6 +47,39 @@ body{
 }
 html::-webkit-scrollbar {
     background-color: transparent;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 }
+
+// SPACINGS
+
+.app-w {
+    max-width: 1200px;
+    @apply px-5;
+  }
+
+  @media (min-width: 640px) {
+    .app-w {
+      max-width: 640px
+    }
+  }
+
+  @media (min-width: 768px) {
+    .app-w {
+      max-width: 768px;
+      // @apply px-10;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .app-w {
+      max-width: 1024px;
+      // @apply px-10;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .app-w {
+      max-width: 1200px
+    }
+  }
